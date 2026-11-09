@@ -1,0 +1,16 @@
+{
+  "appHost": {
+    "path": "apphost.csproj"
+  },
+  "profiles": {
+    "http": {
+      "applicationUrl": "http://localhost:15039",
+      "environmentVariables": {
+        "ASPIRE_DASHBOARD_OTLP_ENDPOINT_URL": "http://localhost:19217",
+        "ASPIRE_RESOURCE_SERVICE_ENDPOINT_URL": "http://localhost:20130",
+        "ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true",
+        "ASPIRE_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS": "true"
+      }
+    }
+  }
+}
