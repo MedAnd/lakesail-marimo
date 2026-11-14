@@ -2,9 +2,16 @@
 
 This MS Aspire Recipe starts a [LakeSail](https://lakesail.com/) Spark Connect server and a [Marimo](https://marimo.io) next-generation Python notebook editor. 
 
-Marimo waits for LakeSail, uses its `sc://sail:50051` endpoint, and serves notebooks from `sail-examples/`. 
+This recipe was inspired by the blog post [Bringing Rust-native Spark compatibility to Microsoft OneLake with Sail and LakeSail](https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/bringing-rust-native-spark-compatibility-to-microsoft-onelake-with-sail-and-lake/5377595). 
 
-Both containers can access the local `data/` directory.
+Combining the developer productivity of [MS Aspire](https://aspire.dev/) with LakeSail, Marimo, and OneLake for a super-low-friction data analytics experience.
+
+## 📓 Marimo workspace examples
+
+The Marimo workspace includes two examples:
+
+- [`Hello Sail.py`](sail-examples/Hello%20Sail.py) is a simple introduction to running Spark SQL and DataFrame operations on Sail.
+- [`MS Fabric & OneLake.py`](sail-examples/MS%20Fabric%20%26%20OneLake.py) is a more advanced example that connects to a Microsoft Fabric Lakehouse, reads a Lakehouse table, and reads a Parquet file from OneLake. It requires a Microsoft Entra service principal and Microsoft Fabric workspace and Lakehouse configuration.
 
 ## 🧰 Setup
 
@@ -44,7 +51,7 @@ dotnetup list
 📦 Install the Microsoft Aspire CLI version used by this project:
 
 ```sh
-dotnet tool install -g Aspire.Cli --version 13.6.4
+dotnet tool install -g Aspire.Cli --version 13.6.5
 ```
 
 Ensure the .NET global tools directory is on your PATH, then verify with `aspire --version`.
@@ -55,11 +62,14 @@ Ensure the .NET global tools directory is on your PATH, then verify with `aspire
 aspire start
 ```
 
-🌐 Open the Microsoft Aspire dashboard URL printed by the CLI and use the `marimo` resource's `ui`
-endpoint to open the editor. 
+🌐 Open the Microsoft Aspire dashboard URL printed by the CLI and use the `marimo` resource's `ui` endpoint to open the editor. 
 
-Put notebooks in `sail-examples/`; files in `data/` are available to both containers under `/data`.
-
-📡 The AppHost configures LakeSail OTLP export to the local Microsoft Aspire dashboard. 
+📡 LakeSail OpenTelemetry support is still experimental with OTLP export (logs, metrics and traces) to the local Microsoft Aspire dashboard enabled. 
 
 The Spark Connect endpoint is exposed on port `50051`.
+
+## 📚 References
+
+- Refer to the [OneLake catalog guide](https://docs.lakesail.com/sail/latest/guide/catalog/onelake.html) in the Sail documentation.
+- Learn more about [Microsoft OneLake](https://learn.microsoft.com/fabric/onelake/onelake-overview).
+- Explore [Sail on GitHub](https://github.com/lakehq/sail) and the [getting started guide](https://docs.lakesail.com/sail/latest/introduction/getting-started/).
