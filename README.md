@@ -1,9 +1,8 @@
 # LakeSail + Marimo (MS Aspire Recipe)
 
-This MS Aspire Recipe starts a LakeSail Spark Connect server and a Marimo editor. 
+This MS Aspire Recipe starts a [LakeSail](https://lakesail.com/) Spark Connect server and a [Marimo](https://marimo.io) next-generation Python notebook editor. 
 
-Marimo waits for LakeSail, uses its `sc://sail:50051` endpoint, and serves notebooks from 
-`sail-examples/`. 
+Marimo waits for LakeSail, uses its `sc://sail:50051` endpoint, and serves notebooks from `sail-examples/`. 
 
 Both containers can access the local `data/` directory.
 
