@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AspireUseCliBundle>true</AspireUseCliBundle>
-    <AssemblyName>LakeSail-Marimo Aspire Recipe</AssemblyName>
+    <AssemblyName>LakeSail + Marimo Aspire Recipe</AssemblyName>
   </PropertyGroup>
 
 </Project>

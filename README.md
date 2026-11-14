@@ -1,6 +1,6 @@
 # LakeSail + Marimo (MS Aspire Recipe)
 
-This MS Aspire Recipe starts a [LakeSail](https://lakesail.com/) Spark Connect server and a [Marimo](https://marimo.io) next-generation Python notebook editor. 
+This MS Aspire Recipe starts a local [LakeSail](https://lakesail.com/) Spark Connect server and a [Marimo](https://marimo.io) next-generation Python notebook editor. 
 
 This recipe was inspired by the blog post [Bringing Rust-native Spark compatibility to Microsoft OneLake with Sail and LakeSail](https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/bringing-rust-native-spark-compatibility-to-microsoft-onelake-with-sail-and-lake/5377595). 
 
